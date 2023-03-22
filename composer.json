@@ -1,0 +1,51 @@
+{
+    "name": "luchavez/aws-ses-bounce",
+    "description": "A Laravel package for blacklisting bounced email address on AWS Simple Email Service (SES)",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Carlo Luchavez",
+            "email": "jamescarloluchavez@gmail.com",
+            "homepage": "https://www.linkedin.com/in/jsluchavez"
+        }
+    ],
+    "homepage": "https://github.com/luchmewep/aws-ses-bounce",
+    "keywords": ["Laravel", "AwsSesBounce"],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "~8|~9",
+        "aws/aws-sdk-php": "^3.231",
+        "luchavez/api-sdk-kit": "^1.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~6|~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Luchavez\\AwsSesBounce\\": "src/",
+            "Luchavez\\AwsSesBounce\\Database\\Seeders\\": "database/seeders/",
+            "Luchavez\\AwsSesBounce\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Luchavez\\AwsSesBounce\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Luchavez\\AwsSesBounce\\Providers\\AwsSesBounceServiceProvider"
+            ],
+            "aliases": {
+                "AwsSesBounce": "Luchavez\\AwsSesBounce\\Facades\\AwsSesBounce"
+            }
+        },
+        "branch-alias": {
+            "dev-master": "1.0.x-dev",
+            "dev-develop": "1.0.x-dev"
+        }
+    }
+}
