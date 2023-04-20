@@ -49,7 +49,7 @@ class DeliveryNotificationController extends Controller
 
         event(new DeliveryNotificationCollectedEvent($data));
 
-        return customResponse()
+        return simpleResponse()
             ->data($data)
             ->message('Successfully collected record.')
             ->success()
@@ -72,7 +72,7 @@ class DeliveryNotificationController extends Controller
 
         event(new DeliveryNotificationCreatedEvent($model));
 
-        return customResponse()
+        return simpleResponse()
             ->data($model)
             ->message('Successfully created record.')
             ->success()
@@ -95,7 +95,7 @@ class DeliveryNotificationController extends Controller
 
         event(new DeliveryNotificationCreatedEvent($model));
 
-        return customResponse()
+        return simpleResponse()
             ->data($model)
             ->message('Successfully created record.')
             ->success()
@@ -115,7 +115,7 @@ class DeliveryNotificationController extends Controller
     {
         event(new DeliveryNotificationShownEvent($deliveryNotification));
 
-        return customResponse()
+        return simpleResponse()
             ->data($deliveryNotification)
             ->message('Successfully collected record.')
             ->success()
@@ -137,7 +137,7 @@ class DeliveryNotificationController extends Controller
 
         event(new DeliveryNotificationUpdatedEvent($deliveryNotification));
 
-        return customResponse()
+        return simpleResponse()
             ->data($deliveryNotification)
             ->message('Successfully updated record.')
             ->success()
@@ -159,7 +159,7 @@ class DeliveryNotificationController extends Controller
 
         event(new DeliveryNotificationUpdatedEvent($deliveryNotification));
 
-        return customResponse()
+        return simpleResponse()
             ->data($deliveryNotification)
             ->message('Successfully updated record.')
             ->success()
@@ -181,7 +181,7 @@ class DeliveryNotificationController extends Controller
 
         event(new DeliveryNotificationArchivedEvent($deliveryNotification));
 
-        return customResponse()
+        return simpleResponse()
             ->data($deliveryNotification)
             ->message('Successfully archived record.')
             ->success()
@@ -203,7 +203,7 @@ class DeliveryNotificationController extends Controller
 
         event(new DeliveryNotificationRestoredEvent($data));
 
-        return customResponse()
+        return simpleResponse()
             ->data($data)
             ->message('Successfully restored record.')
             ->success()

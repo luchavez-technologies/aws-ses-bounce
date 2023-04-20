@@ -30,7 +30,7 @@ class EmptyToRecipientsException extends Exception
      */
     public function render(Request $request): JsonResponse
     {
-        return customResponse()
+        return simpleResponse()
             ->data($this->blocked_emails)
             ->failed()
             ->message('Email cancelled due to empty `to` recipients.')

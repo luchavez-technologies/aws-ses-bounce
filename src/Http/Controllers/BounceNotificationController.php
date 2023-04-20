@@ -49,7 +49,7 @@ class BounceNotificationController extends Controller
 
         event(new BounceNotificationCollectedEvent($data));
 
-        return customResponse()
+        return simpleResponse()
             ->data($data)
             ->message('Successfully collected record.')
             ->success()
@@ -72,7 +72,7 @@ class BounceNotificationController extends Controller
 
         event(new BounceNotificationCreatedEvent($model));
 
-        return customResponse()
+        return simpleResponse()
             ->data($model)
             ->message('Successfully created record.')
             ->success()
@@ -95,7 +95,7 @@ class BounceNotificationController extends Controller
 
         event(new BounceNotificationCreatedEvent($model));
 
-        return customResponse()
+        return simpleResponse()
             ->data($model)
             ->message('Successfully created record.')
             ->success()
@@ -115,7 +115,7 @@ class BounceNotificationController extends Controller
     {
         event(new BounceNotificationShownEvent($bounceNotification));
 
-        return customResponse()
+        return simpleResponse()
             ->data($bounceNotification)
             ->message('Successfully collected record.')
             ->success()
@@ -137,7 +137,7 @@ class BounceNotificationController extends Controller
 
         event(new BounceNotificationUpdatedEvent($bounceNotification));
 
-        return customResponse()
+        return simpleResponse()
             ->data($bounceNotification)
             ->message('Successfully updated record.')
             ->success()
@@ -159,7 +159,7 @@ class BounceNotificationController extends Controller
 
         event(new BounceNotificationUpdatedEvent($bounceNotification));
 
-        return customResponse()
+        return simpleResponse()
             ->data($bounceNotification)
             ->message('Successfully updated record.')
             ->success()
@@ -181,7 +181,7 @@ class BounceNotificationController extends Controller
 
         event(new BounceNotificationArchivedEvent($bounceNotification));
 
-        return customResponse()
+        return simpleResponse()
             ->data($bounceNotification)
             ->message('Successfully archived record.')
             ->success()
@@ -203,7 +203,7 @@ class BounceNotificationController extends Controller
 
         event(new BounceNotificationRestoredEvent($data));
 
-        return customResponse()
+        return simpleResponse()
             ->data($data)
             ->message('Successfully restored record.')
             ->success()

@@ -25,11 +25,11 @@ class AwsSesBounceController extends Controller
      */
     public function bounce(Request $request): JsonResponse
     {
-        awsSesBounce()->validateSignature($request);
+        awsSesBounce()->validateSignature(request: $request, absolute: false);
 
         // Check if subscription confirmation
         if (awsSesBounce()->confirmSnsTopicSubscription($request)) {
-            return customResponse()
+            return simpleResponse()
                 ->data([])
                 ->message('Successfully confirmed bounce feedback subscription.')
                 ->success()
@@ -38,7 +38,7 @@ class AwsSesBounceController extends Controller
 
         $notifications = awsSesBounce()->createBounceNotifications($request);
 
-        return customResponse()
+        return simpleResponse()
             ->data($notifications)
             ->message('Successfully created records.')
             ->success()
@@ -55,11 +55,11 @@ class AwsSesBounceController extends Controller
      */
     public function complaint(Request $request): JsonResponse
     {
-        awsSesBounce()->validateSignature($request);
+        awsSesBounce()->validateSignature(request: $request, absolute: false);
 
         // Check if subscription confirmation
         if (awsSesBounce()->confirmSnsTopicSubscription($request)) {
-            return customResponse()
+            return simpleResponse()
                 ->data([])
                 ->message('Successfully confirmed complaint feedback subscription.')
                 ->success()
@@ -68,7 +68,7 @@ class AwsSesBounceController extends Controller
 
         $notifications = awsSesBounce()->createComplaintNotifications($request);
 
-        return customResponse()
+        return simpleResponse()
             ->data($notifications)
             ->message('Successfully created records.')
             ->success()
@@ -85,11 +85,11 @@ class AwsSesBounceController extends Controller
      */
     public function delivery(Request $request): JsonResponse
     {
-        awsSesBounce()->validateSignature($request);
+        awsSesBounce()->validateSignature(request: $request, absolute: false);
 
         // Check if subscription confirmation
         if (awsSesBounce()->confirmSnsTopicSubscription($request)) {
-            return customResponse()
+            return simpleResponse()
                 ->data([])
                 ->message('Successfully confirmed delivery feedback subscription.')
                 ->success()
@@ -98,7 +98,7 @@ class AwsSesBounceController extends Controller
 
         $notifications = awsSesBounce()->createDeliveryNotifications($request);
 
-        return customResponse()
+        return simpleResponse()
             ->data($notifications)
             ->message('Successfully created records.')
             ->success()
@@ -121,7 +121,7 @@ class AwsSesBounceController extends Controller
 
         awsSesBounce()->sendTestEmail($message, $request->get('to'), $request->get('cc'), $request->get('bcc'));
 
-        return customResponse()
+        return simpleResponse()
             ->data([])
             ->message('Email successfully sent.')
             ->success()
@@ -138,7 +138,7 @@ class AwsSesBounceController extends Controller
      */
     public function dump(Request $request): JsonResponse
     {
-        return customResponse()
+        return simpleResponse()
             ->data($request)
             ->message('Data dumped successfully.')
             ->success()
