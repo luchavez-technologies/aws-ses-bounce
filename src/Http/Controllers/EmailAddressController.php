@@ -51,7 +51,7 @@ class EmailAddressController extends Controller
 
         event(new EmailAddressCollectedEvent($data));
 
-        return customResponse()
+        return simpleResponse()
             ->data($data)
             ->message('Successfully collected record.')
             ->success()
@@ -74,7 +74,7 @@ class EmailAddressController extends Controller
 
         event(new EmailAddressCreatedEvent($model));
 
-        return customResponse()
+        return simpleResponse()
             ->data($model)
             ->message('Successfully created record.')
             ->success()
@@ -97,7 +97,7 @@ class EmailAddressController extends Controller
 
         event(new EmailAddressCreatedEvent($model));
 
-        return customResponse()
+        return simpleResponse()
             ->data($model)
             ->message('Successfully created record.')
             ->success()
@@ -117,7 +117,7 @@ class EmailAddressController extends Controller
     {
         event(new EmailAddressShownEvent($emailAddress));
 
-        return customResponse()
+        return simpleResponse()
             ->data($emailAddress)
             ->message('Successfully collected record.')
             ->success()
@@ -139,7 +139,7 @@ class EmailAddressController extends Controller
 
         event(new EmailAddressUpdatedEvent($emailAddress));
 
-        return customResponse()
+        return simpleResponse()
             ->data($emailAddress)
             ->message('Successfully updated record.')
             ->success()
@@ -161,7 +161,7 @@ class EmailAddressController extends Controller
 
         event(new EmailAddressUpdatedEvent($emailAddress));
 
-        return customResponse()
+        return simpleResponse()
             ->data($emailAddress)
             ->message('Successfully updated record.')
             ->success()
@@ -183,7 +183,7 @@ class EmailAddressController extends Controller
 
         event(new EmailAddressArchivedEvent($emailAddress));
 
-        return customResponse()
+        return simpleResponse()
             ->data($emailAddress)
             ->message('Successfully archived record.')
             ->success()
@@ -205,7 +205,7 @@ class EmailAddressController extends Controller
 
         event(new EmailAddressRestoredEvent($data));
 
-        return customResponse()
+        return simpleResponse()
             ->data($data)
             ->message('Successfully restored record.')
             ->success()
@@ -233,7 +233,7 @@ class EmailAddressController extends Controller
 
         $emailAddress = awsSesBounce()->block($emailAddress, $reason);
 
-        return customResponse()
+        return simpleResponse()
             ->data($emailAddress)
             ->message('Successfully blocked an email address.')
             ->success()
@@ -259,7 +259,7 @@ class EmailAddressController extends Controller
 
         $emailAddress = awsSesBounce()->unblock($emailAddress, $reason);
 
-        return customResponse()
+        return simpleResponse()
             ->data($emailAddress)
             ->message('Successfully unblocked an email address.')
             ->success()
@@ -283,7 +283,7 @@ class EmailAddressController extends Controller
 
         $emailAddress->loadCount($relationships)->load($relationships);
 
-        return customResponse()
+        return simpleResponse()
             ->data($emailAddress)
             ->message('Successfully collected record.')
             ->success()
@@ -305,7 +305,7 @@ class EmailAddressController extends Controller
 
         $emailAddress->loadCount($relationships)->load($relationships);
 
-        return customResponse()
+        return simpleResponse()
             ->data($emailAddress)
             ->message('Successfully collected record.')
             ->success()
@@ -327,7 +327,7 @@ class EmailAddressController extends Controller
 
         $emailAddress->loadCount($relationships)->load($relationships);
 
-        return customResponse()
+        return simpleResponse()
             ->data($emailAddress)
             ->message('Successfully collected record.')
             ->success()
@@ -349,7 +349,7 @@ class EmailAddressController extends Controller
 
         $emailAddress->loadCount($relationships)->load($relationships);
 
-        return customResponse()
+        return simpleResponse()
             ->data($emailAddress)
             ->message('Successfully collected record.')
             ->success()

@@ -49,7 +49,7 @@ class ComplaintNotificationController extends Controller
 
         event(new ComplaintNotificationCollectedEvent($data));
 
-        return customResponse()
+        return simpleResponse()
             ->data($data)
             ->message('Successfully collected record.')
             ->success()
@@ -72,7 +72,7 @@ class ComplaintNotificationController extends Controller
 
         event(new ComplaintNotificationCreatedEvent($model));
 
-        return customResponse()
+        return simpleResponse()
             ->data($model)
             ->message('Successfully created record.')
             ->success()
@@ -95,7 +95,7 @@ class ComplaintNotificationController extends Controller
 
         event(new ComplaintNotificationCreatedEvent($model));
 
-        return customResponse()
+        return simpleResponse()
             ->data($model)
             ->message('Successfully created record.')
             ->success()
@@ -115,7 +115,7 @@ class ComplaintNotificationController extends Controller
     {
         event(new ComplaintNotificationShownEvent($complaintNotification));
 
-        return customResponse()
+        return simpleResponse()
             ->data($complaintNotification)
             ->message('Successfully collected record.')
             ->success()
@@ -137,7 +137,7 @@ class ComplaintNotificationController extends Controller
 
         event(new ComplaintNotificationUpdatedEvent($complaintNotification));
 
-        return customResponse()
+        return simpleResponse()
             ->data($complaintNotification)
             ->message('Successfully updated record.')
             ->success()
@@ -159,7 +159,7 @@ class ComplaintNotificationController extends Controller
 
         event(new ComplaintNotificationUpdatedEvent($complaintNotification));
 
-        return customResponse()
+        return simpleResponse()
             ->data($complaintNotification)
             ->message('Successfully updated record.')
             ->success()
@@ -181,7 +181,7 @@ class ComplaintNotificationController extends Controller
 
         event(new ComplaintNotificationArchivedEvent($complaintNotification));
 
-        return customResponse()
+        return simpleResponse()
             ->data($complaintNotification)
             ->message('Successfully archived record.')
             ->success()
@@ -203,7 +203,7 @@ class ComplaintNotificationController extends Controller
 
         event(new ComplaintNotificationRestoredEvent($data));
 
-        return customResponse()
+        return simpleResponse()
             ->data($data)
             ->message('Successfully restored record.')
             ->success()
