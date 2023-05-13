@@ -133,5 +133,5 @@ Please see the [license file](license.md) for more information.
 
 [link-packagist]: https://packagist.org/packages/luchavez/aws-ses-bounce
 [link-downloads]: https://packagist.org/packages/luchavez/aws-ses-bounce
-[link-author]: https://github.com/luchmewep
+[link-author]: https://github.com/luchavez-technologies
 [link-contributors]: ../../contributors

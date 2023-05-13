@@ -9,18 +9,18 @@
             "homepage": "https://www.linkedin.com/in/jsluchavez"
         }
     ],
-    "homepage": "https://github.com/luchmewep/aws-ses-bounce",
+    "homepage": "https://github.com/luchavez-technologies/aws-ses-bounce",
     "keywords": ["Laravel", "AwsSesBounce"],
     "require": {
         "php": "^8.0",
-        "illuminate/support": "~8|~9",
+        "illuminate/support": "~8|~9|~10",
         "aws/aws-sdk-php": "^3.231",
         "luchavez/api-sdk-kit": "^1.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
         "phpunit/phpunit": "~9.0",
-        "orchestra/testbench": "~6|~7"
+        "orchestra/testbench": "~6|~7|~8"
     },
     "autoload": {
         "psr-4": {
