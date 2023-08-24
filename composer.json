@@ -1,6 +1,6 @@
 {
     "name": "luchavez/aws-ses-bounce",
-    "description": "A Laravel package for blacklisting bounced email address on AWS Simple Email Service (SES)",
+    "description": "Blacklisting bounced email addresses on AWS Simple Email Service (SES) for Laravel 8|9|10",
     "license": "MIT",
     "authors": [
         {
