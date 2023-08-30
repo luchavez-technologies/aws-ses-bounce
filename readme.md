@@ -140,7 +140,7 @@ Please see the [license file](license.md) for more information.
 [link-packagist]: https://packagist.org/packages/luchavez/aws-ses-bounce
 [link-downloads]: https://packagist.org/packages/luchavez/aws-ses-bounce
 [link-stars]: https://github.com/luchavez-technologies/aws-ses-bounce
-[link-discord]: https://discord.gg/bFpDTgp3
+[link-discord]: https://discord.gg/MBxxAkQAxx
 [link-twitter]: https://twitter.com/luchaveztech
 
 [link-author]: https://github.com/luchavez-technologies
