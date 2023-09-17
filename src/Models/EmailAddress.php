@@ -2,12 +2,12 @@
 
 namespace Luchavez\AwsSesBounce\Models;
 
-use Luchavez\AwsSesBounce\Traits\HasEmailAddressFactoryTrait;
-use Luchavez\StarterKit\Traits\UsesUUIDTrait;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Luchavez\AwsSesBounce\Traits\HasEmailAddressFactoryTrait;
+use Luchavez\StarterKit\Traits\UsesUUIDTrait;
 
 /**
  * Class EmailAddress

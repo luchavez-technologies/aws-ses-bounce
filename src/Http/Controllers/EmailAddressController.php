@@ -3,26 +3,23 @@
 namespace Luchavez\AwsSesBounce\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Luchavez\AwsSesBounce\Events\EmailAddress\EmailAddressArchivedEvent;
 use Luchavez\AwsSesBounce\Events\EmailAddress\EmailAddressCollectedEvent;
 use Luchavez\AwsSesBounce\Events\EmailAddress\EmailAddressCreatedEvent;
 use Luchavez\AwsSesBounce\Events\EmailAddress\EmailAddressRestoredEvent;
-// Model
 use Luchavez\AwsSesBounce\Events\EmailAddress\EmailAddressShownEvent;
-// Requests
 use Luchavez\AwsSesBounce\Events\EmailAddress\EmailAddressUpdatedEvent;
 use Luchavez\AwsSesBounce\Http\Requests\EmailAddress\BlockEmailAddressRequest;
 use Luchavez\AwsSesBounce\Http\Requests\EmailAddress\DeleteEmailAddressRequest;
 use Luchavez\AwsSesBounce\Http\Requests\EmailAddress\IndexEmailAddressRequest;
 use Luchavez\AwsSesBounce\Http\Requests\EmailAddress\RestoreEmailAddressRequest;
 use Luchavez\AwsSesBounce\Http\Requests\EmailAddress\ShowEmailAddressRequest;
-// Events
 use Luchavez\AwsSesBounce\Http\Requests\EmailAddress\StoreEmailAddressRequest;
 use Luchavez\AwsSesBounce\Http\Requests\EmailAddress\UnblockEmailAddressRequest;
 use Luchavez\AwsSesBounce\Http\Requests\EmailAddress\UpdateEmailAddressRequest;
 use Luchavez\AwsSesBounce\Models\EmailAddress;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 /**
  * Class EmailAddressController

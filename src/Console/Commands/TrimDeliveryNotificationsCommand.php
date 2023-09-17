@@ -2,9 +2,9 @@
 
 namespace Luchavez\AwsSesBounce\Console\Commands;
 
+use Illuminate\Console\Command;
 use Luchavez\AwsSesBounce\Models\DeliveryNotification;
 use Luchavez\StarterKit\Traits\UsesCommandCustomMessagesTrait;
-use Illuminate\Console\Command;
 
 /**
  * Class TrimDeliveryNotificationsCommand

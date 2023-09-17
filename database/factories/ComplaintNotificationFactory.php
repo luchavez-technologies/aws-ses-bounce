@@ -2,9 +2,8 @@
 
 namespace Luchavez\AwsSesBounce\Database\Factories;
 
-// Model
-use Luchavez\AwsSesBounce\Models\ComplaintNotification;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Luchavez\AwsSesBounce\Models\ComplaintNotification;
 
 /**
  * Class ComplaintNotification

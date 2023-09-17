@@ -9,6 +9,7 @@ return [
     ],
     'validate_signature' => env('ASB_VALIDATE_SIGNATURE', false),
     'max_bounce_count' => env('ASB_MAX_BOUNCE_COUNT', 3),
+    'max_complaint_count' => env('ASB_MAX_COMPLAINT_COUNT', 3),
     'soft_delete_notifications' => env('ASB_SOFT_DELETE_NOTIFICATIONS', false),
     'deliveries_max_age_in_days' => env('ASB_DELIVERIES_MAX_AGE_IN_DAYS', 7),
     'bounce_reasons' => [

@@ -2,7 +2,7 @@
 
 namespace Luchavez\AwsSesBounce\Http\Requests;
 
-use Luchavez\StarterKit\Requests\FormRequest;
+use Illuminate\Foundation\Http\FormRequest;
 
 /**
  * Class AwsSesBounceTestRequest

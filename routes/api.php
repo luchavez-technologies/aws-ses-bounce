@@ -1,11 +1,11 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use Luchavez\AwsSesBounce\Http\Controllers\AwsSesBounceController;
 use Luchavez\AwsSesBounce\Http\Controllers\BounceNotificationController;
 use Luchavez\AwsSesBounce\Http\Controllers\ComplaintNotificationController;
 use Luchavez\AwsSesBounce\Http\Controllers\DeliveryNotificationController;
 use Luchavez\AwsSesBounce\Http\Controllers\EmailAddressController;
-use Illuminate\Support\Facades\Route;
 
 Route::prefix('aws-ses')->name('aws-ses.')->group(function () {
     Route::prefix('webhook')->name('webhook.')->group(function () {

@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\Schema;
  * @author James Carlo Luchavez <jamescarloluchavez@gmail.com>
  */
 
-return new class () extends Migration {
+return new class() extends Migration
+{
     /**
      * Run the migrations.
      *

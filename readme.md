@@ -1,7 +1,10 @@
-# AWS SES Bounce
+# AWS SES Bounce for Laravel 8|9|10
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
+[![GitHub Repo stars][ico-stars]][link-stars]
+[![Discord][ico-discord]][link-discord]
+[![Twitter Follow][ico-twitter]][link-twitter]
 
 Using AWS Simple Email Service (SES) for sending emails and newsletters is very common in Laravel apps nowadays.
 AWS SES [configurations](https://laravel.com/docs/8.x/mail#ses-driver) for Laravel is easy to follow as well.
@@ -128,10 +131,17 @@ If you discover any security related issues, please email jamescarloluchavez@gma
 
 Please see the [license file](license.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/luchavez/aws-ses-bounce.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/luchavez/aws-ses-bounce.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/luchavez/aws-ses-bounce.svg
+[ico-downloads]: https://img.shields.io/packagist/dt/luchavez/aws-ses-bounce.svg
+[ico-stars]: https://img.shields.io/github/stars/luchavez-technologies/aws-ses-bounce
+[ico-discord]: https://img.shields.io/discord/1143744619956404295?color=8c9eff&label=Discord&logo=discord
+[ico-twitter]: https://img.shields.io/twitter/follow/luchaveztech
 
 [link-packagist]: https://packagist.org/packages/luchavez/aws-ses-bounce
 [link-downloads]: https://packagist.org/packages/luchavez/aws-ses-bounce
+[link-stars]: https://github.com/luchavez-technologies/aws-ses-bounce
+[link-discord]: https://discord.gg/MBxxAkQAxx
+[link-twitter]: https://twitter.com/luchaveztech
+
 [link-author]: https://github.com/luchavez-technologies
 [link-contributors]: ../../contributors
