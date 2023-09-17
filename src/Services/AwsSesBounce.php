@@ -2,6 +2,19 @@
 
 namespace Luchavez\AwsSesBounce\Services;
 
+use GuzzleHttp\Promise\PromiseInterface;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Client\Response;
+use Illuminate\Http\Request;
+use Illuminate\Mail\Message;
+use Illuminate\Routing\Exceptions\InvalidSignatureException;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Mail;
+use JetBrains\PhpStorm\ArrayShape;
+use Luchavez\ApiSdkKit\Models\AuditLog;
 use Luchavez\AwsSesBounce\DataFactories\BounceNotificationDataFactory;
 use Luchavez\AwsSesBounce\DataFactories\ComplaintNotificationDataFactory;
 use Luchavez\AwsSesBounce\DataFactories\DeliveryNotificationDataFactory;
@@ -15,20 +28,7 @@ use Luchavez\AwsSesBounce\Models\BounceNotification;
 use Luchavez\AwsSesBounce\Models\ComplaintNotification;
 use Luchavez\AwsSesBounce\Models\DeliveryNotification;
 use Luchavez\AwsSesBounce\Models\EmailAddress;
-use Luchavez\ApiSdkKit\Models\AuditLog;
 use Luchavez\StarterKit\Traits\HasTaggableCacheTrait;
-use GuzzleHttp\Promise\PromiseInterface;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Http\Client\Response;
-use Illuminate\Http\Request;
-use Illuminate\Mail\Message;
-use Illuminate\Routing\Exceptions\InvalidSignatureException;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Mail;
-use JetBrains\PhpStorm\ArrayShape;
 
 /**
  * Class AwsSesBounce
@@ -137,6 +137,14 @@ class AwsSesBounce
         return config('aws-ses-bounce.max_bounce_count');
     }
 
+    /**
+     * @return int
+     */
+    public function getMaxComplaintCount(): int
+    {
+        return config('aws-ses-bounce.max_complaint_count');
+    }
+
     /***** BLOCK / UNBLOCK *****/
 
     /**
@@ -202,7 +210,7 @@ class AwsSesBounce
      */
     public function dumpData(mixed $request): \Illuminate\Http\Response|AuditLog|Builder|PromiseInterface|Response|null
     {
-        return makeRequest(awsSesBounce()->getDumpApiUrl())->data($request)->post('api/aws-ses/dump');
+        return simpleHttp(awsSesBounce()->getDumpApiUrl())->data($request)->post('api/aws-ses/dump');
     }
 
     /***** VALIDATE SIGNATURE RELATED *****/
@@ -275,7 +283,7 @@ class AwsSesBounce
         $data = SNSTopicSubscriptionConfirmationResponseData::from(json_decode($request->getContent(), true));
 
         if (isset($data->subscribeURL)) {
-            $log = makeRequest($data->subscribeURL)->executeGet();
+            $log = simpleHttp($data->subscribeURL)->get();
 
             return $log->successful();
         }

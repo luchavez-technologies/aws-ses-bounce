@@ -2,9 +2,9 @@
 
 namespace Luchavez\AwsSesBounce\Listeners;
 
-use Luchavez\AwsSesBounce\Exceptions\EmptyToRecipientsException;
 use Illuminate\Mail\Events\MessageSending;
 use Illuminate\Support\Arr;
+use Luchavez\AwsSesBounce\Exceptions\EmptyToRecipientsException;
 
 /**
  * Class ValidateEmailAddressListener

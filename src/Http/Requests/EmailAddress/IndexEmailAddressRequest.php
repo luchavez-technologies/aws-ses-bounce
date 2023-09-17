@@ -2,7 +2,7 @@
 
 namespace Luchavez\AwsSesBounce\Http\Requests\EmailAddress;
 
-use Luchavez\StarterKit\Requests\FormRequest;
+use Illuminate\Foundation\Http\FormRequest;
 
 /**
  * Class IndexEmailAddressRequest

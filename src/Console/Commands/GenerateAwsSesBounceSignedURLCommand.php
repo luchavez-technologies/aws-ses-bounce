@@ -2,9 +2,9 @@
 
 namespace Luchavez\AwsSesBounce\Console\Commands;
 
-use Luchavez\StarterKit\Traits\UsesCommandCustomMessagesTrait;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\URL;
+use Luchavez\StarterKit\Traits\UsesCommandCustomMessagesTrait;
 
 /**
  * Class GenerateAwsSesBounceSignedURLCommand

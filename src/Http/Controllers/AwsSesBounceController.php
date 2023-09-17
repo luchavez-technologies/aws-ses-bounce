@@ -3,10 +3,10 @@
 namespace Luchavez\AwsSesBounce\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Luchavez\AwsSesBounce\Exceptions\EmptyToRecipientsException;
-use Luchavez\AwsSesBounce\Http\Requests\AwsSesBounceTestRequest;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Luchavez\AwsSesBounce\Exceptions\EmptyToRecipientsException;
+use Luchavez\AwsSesBounce\Http\Requests\AwsSesBounceTestRequest;
 
 /**
  * Class AwsSesBounceController

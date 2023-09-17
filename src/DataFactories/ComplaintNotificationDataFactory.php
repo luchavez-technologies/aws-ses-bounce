@@ -3,10 +3,9 @@
 namespace Luchavez\AwsSesBounce\DataFactories;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Builder;
 use Luchavez\AwsSesBounce\Models\ComplaintNotification;
 use Luchavez\StarterKit\Abstracts\BaseDataFactory;
-// Model
-use Illuminate\Database\Eloquent\Builder;
 
 /**
  * Class ComplaintNotificationDataFactory

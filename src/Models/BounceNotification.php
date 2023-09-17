@@ -2,11 +2,11 @@
 
 namespace Luchavez\AwsSesBounce\Models;
 
-use Luchavez\AwsSesBounce\Traits\HasBounceNotificationFactoryTrait;
-use Luchavez\StarterKit\Traits\UsesUUIDTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Luchavez\AwsSesBounce\Traits\HasBounceNotificationFactoryTrait;
+use Luchavez\StarterKit\Traits\UsesUUIDTrait;
 
 /**
  * Class BounceNotification

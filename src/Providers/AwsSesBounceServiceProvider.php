@@ -2,6 +2,9 @@
 
 namespace Luchavez\AwsSesBounce\Providers;
 
+use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Mail\Events\MessageSending;
+use Illuminate\Support\Facades\Event;
 use Luchavez\AwsSesBounce\Console\Commands\GenerateAwsSesBounceSignedURLCommand;
 use Luchavez\AwsSesBounce\Console\Commands\TrimDeliveryNotificationsCommand;
 use Luchavez\AwsSesBounce\Listeners\ValidateEmailAddressListener;
@@ -10,9 +13,6 @@ use Luchavez\AwsSesBounce\Observers\BounceNotificationObserver;
 use Luchavez\AwsSesBounce\Services\AwsSesBounce;
 use Luchavez\StarterKit\Abstracts\BaseStarterKitServiceProvider;
 use Luchavez\StarterKit\Interfaces\ProviderConsoleKernelInterface;
-use Illuminate\Console\Scheduling\Schedule;
-use Illuminate\Mail\Events\MessageSending;
-use Illuminate\Support\Facades\Event;
 
 /**
  * Class AwsSesBounceServiceProvider
@@ -49,6 +49,7 @@ class AwsSesBounceServiceProvider extends BaseStarterKitServiceProvider implemen
         'ASB_DUMP_URL' => '${APP_URL}',
         'ASB_VALIDATE_SIGNATURE' => false,
         'ASB_MAX_BOUNCE_COUNT' => 3,
+        'ASB_MAX_COMPLAINT_COUNT' => 3,
         'ASB_SOFT_DELETE_NOTIFICATIONS' => false,
         'ASB_DELIVERIES_MAX_AGE_IN_DAYS' => 7,
     ];
@@ -97,7 +98,7 @@ class AwsSesBounceServiceProvider extends BaseStarterKitServiceProvider implemen
     {
         // Publishing the configuration file.
         $this->publishes([
-            __DIR__.'/../config/aws-ses-bounce.php' => config_path('aws-ses-bounce.php'),
+            __DIR__.'/../../config/aws-ses-bounce.php' => config_path('aws-ses-bounce.php'),
         ], 'aws-ses-bounce.config');
 
         // Registering package commands.

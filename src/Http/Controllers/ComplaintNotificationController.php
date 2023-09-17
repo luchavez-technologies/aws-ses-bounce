@@ -3,24 +3,21 @@
 namespace Luchavez\AwsSesBounce\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Luchavez\AwsSesBounce\Events\ComplaintNotification\ComplaintNotificationArchivedEvent;
 use Luchavez\AwsSesBounce\Events\ComplaintNotification\ComplaintNotificationCollectedEvent;
-// Model
 use Luchavez\AwsSesBounce\Events\ComplaintNotification\ComplaintNotificationCreatedEvent;
-// Requests
 use Luchavez\AwsSesBounce\Events\ComplaintNotification\ComplaintNotificationRestoredEvent;
 use Luchavez\AwsSesBounce\Events\ComplaintNotification\ComplaintNotificationShownEvent;
 use Luchavez\AwsSesBounce\Events\ComplaintNotification\ComplaintNotificationUpdatedEvent;
 use Luchavez\AwsSesBounce\Http\Requests\ComplaintNotification\DeleteComplaintNotificationRequest;
 use Luchavez\AwsSesBounce\Http\Requests\ComplaintNotification\IndexComplaintNotificationRequest;
 use Luchavez\AwsSesBounce\Http\Requests\ComplaintNotification\RestoreComplaintNotificationRequest;
-// Events
 use Luchavez\AwsSesBounce\Http\Requests\ComplaintNotification\ShowComplaintNotificationRequest;
 use Luchavez\AwsSesBounce\Http\Requests\ComplaintNotification\StoreComplaintNotificationRequest;
 use Luchavez\AwsSesBounce\Http\Requests\ComplaintNotification\UpdateComplaintNotificationRequest;
 use Luchavez\AwsSesBounce\Models\ComplaintNotification;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 /**
  * Class ComplaintNotificationController

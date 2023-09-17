@@ -63,17 +63,17 @@ class MailResponseData extends BaseJsonSerializable
     /**
      * @var bool|null
      */
-    public bool|null $headersTruncated;
+    public ?bool $headersTruncated;
 
     /**
      * @var HeadersResponseData[]|null
      */
-    public array|null $headers;
+    public ?array $headers;
 
     /**
      * @var CommonHeadersResponseData|null
      */
-    public CommonHeadersResponseData|null $commonHeaders;
+    public ?CommonHeadersResponseData $commonHeaders;
 
     /**
      * @param  array|null  $headers

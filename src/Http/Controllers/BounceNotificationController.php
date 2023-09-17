@@ -3,24 +3,21 @@
 namespace Luchavez\AwsSesBounce\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Luchavez\AwsSesBounce\Events\BounceNotification\BounceNotificationArchivedEvent;
 use Luchavez\AwsSesBounce\Events\BounceNotification\BounceNotificationCollectedEvent;
-// Model
 use Luchavez\AwsSesBounce\Events\BounceNotification\BounceNotificationCreatedEvent;
-// Requests
 use Luchavez\AwsSesBounce\Events\BounceNotification\BounceNotificationRestoredEvent;
 use Luchavez\AwsSesBounce\Events\BounceNotification\BounceNotificationShownEvent;
 use Luchavez\AwsSesBounce\Events\BounceNotification\BounceNotificationUpdatedEvent;
 use Luchavez\AwsSesBounce\Http\Requests\BounceNotification\DeleteBounceNotificationRequest;
 use Luchavez\AwsSesBounce\Http\Requests\BounceNotification\IndexBounceNotificationRequest;
 use Luchavez\AwsSesBounce\Http\Requests\BounceNotification\RestoreBounceNotificationRequest;
-// Events
 use Luchavez\AwsSesBounce\Http\Requests\BounceNotification\ShowBounceNotificationRequest;
 use Luchavez\AwsSesBounce\Http\Requests\BounceNotification\StoreBounceNotificationRequest;
 use Luchavez\AwsSesBounce\Http\Requests\BounceNotification\UpdateBounceNotificationRequest;
 use Luchavez\AwsSesBounce\Models\BounceNotification;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 /**
  * Class BounceNotificationController

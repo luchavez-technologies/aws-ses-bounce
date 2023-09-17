@@ -2,10 +2,9 @@
 
 namespace Luchavez\AwsSesBounce\DataFactories;
 
+use Illuminate\Database\Eloquent\Builder;
 use Luchavez\AwsSesBounce\Models\EmailAddress;
 use Luchavez\StarterKit\Abstracts\BaseDataFactory;
-// Model
-use Illuminate\Database\Eloquent\Builder;
 
 /**
  * Class EmailAddressDataFactory

@@ -2,7 +2,7 @@
 
 namespace Luchavez\AwsSesBounce\Http\Requests\BounceNotification;
 
-use Luchavez\StarterKit\Requests\FormRequest;
+use Illuminate\Foundation\Http\FormRequest;
 
 /**
  * Class RestoreBounceNotificationRequest

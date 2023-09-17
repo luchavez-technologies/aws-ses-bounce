@@ -3,24 +3,21 @@
 namespace Luchavez\AwsSesBounce\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Luchavez\AwsSesBounce\Events\DeliveryNotification\DeliveryNotificationArchivedEvent;
 use Luchavez\AwsSesBounce\Events\DeliveryNotification\DeliveryNotificationCollectedEvent;
-// Model
 use Luchavez\AwsSesBounce\Events\DeliveryNotification\DeliveryNotificationCreatedEvent;
-// Requests
 use Luchavez\AwsSesBounce\Events\DeliveryNotification\DeliveryNotificationRestoredEvent;
 use Luchavez\AwsSesBounce\Events\DeliveryNotification\DeliveryNotificationShownEvent;
 use Luchavez\AwsSesBounce\Events\DeliveryNotification\DeliveryNotificationUpdatedEvent;
 use Luchavez\AwsSesBounce\Http\Requests\DeliveryNotification\DeleteDeliveryNotificationRequest;
 use Luchavez\AwsSesBounce\Http\Requests\DeliveryNotification\IndexDeliveryNotificationRequest;
 use Luchavez\AwsSesBounce\Http\Requests\DeliveryNotification\RestoreDeliveryNotificationRequest;
-// Events
 use Luchavez\AwsSesBounce\Http\Requests\DeliveryNotification\ShowDeliveryNotificationRequest;
 use Luchavez\AwsSesBounce\Http\Requests\DeliveryNotification\StoreDeliveryNotificationRequest;
 use Luchavez\AwsSesBounce\Http\Requests\DeliveryNotification\UpdateDeliveryNotificationRequest;
 use Luchavez\AwsSesBounce\Models\DeliveryNotification;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 /**
  * Class DeliveryNotificationController

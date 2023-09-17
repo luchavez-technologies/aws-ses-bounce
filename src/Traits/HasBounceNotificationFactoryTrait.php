@@ -2,9 +2,9 @@
 
 namespace Luchavez\AwsSesBounce\Traits;
 
-use Luchavez\AwsSesBounce\Database\Factories\BounceNotificationFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Luchavez\AwsSesBounce\Database\Factories\BounceNotificationFactory;
 
 /**
  * Trait HasBounceNotificationFactoryTrait
