@@ -28,12 +28,14 @@ return new class() extends Migration
         Schema::create('delivery_notifications', static function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->foreignIdFor(EmailAddress::class);
+            $table->foreignIdFor(EmailAddress::class)->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->integer('processing_time_millis');
             $table->string('smtp_response');
             $table->timestamp('delivered_at');
             $table->softDeletes();
             $table->timestamps();
+
+            $table->index('created_at'); // for searching
         });
     }
 
