@@ -28,7 +28,7 @@ return new class() extends Migration
         Schema::create('bounce_notifications', static function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->foreignIdFor(EmailAddress::class);
+            $table->foreignIdFor(EmailAddress::class)->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('type');
             $table->string('sub_type');
             $table->string('status_code');

@@ -28,7 +28,7 @@ return new class() extends Migration
         Schema::create('complaint_notifications', static function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->foreignIdFor(EmailAddress::class);
+            $table->foreignIdFor(EmailAddress::class)->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('user_agent');
             $table->string('feedback_type');
             $table->timestamp('arrival_date');

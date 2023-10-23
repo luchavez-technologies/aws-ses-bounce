@@ -9,7 +9,11 @@ use Luchavez\AwsSesBounce\Console\Commands\GenerateAwsSesBounceSignedURLCommand;
 use Luchavez\AwsSesBounce\Console\Commands\TrimDeliveryNotificationsCommand;
 use Luchavez\AwsSesBounce\Listeners\ValidateEmailAddressListener;
 use Luchavez\AwsSesBounce\Models\BounceNotification;
+use Luchavez\AwsSesBounce\Models\ComplaintNotification;
+use Luchavez\AwsSesBounce\Models\EmailAddress;
 use Luchavez\AwsSesBounce\Observers\BounceNotificationObserver;
+use Luchavez\AwsSesBounce\Observers\ComplaintNotificationObserver;
+use Luchavez\AwsSesBounce\Observers\EmailAddressObserver;
 use Luchavez\AwsSesBounce\Services\AwsSesBounce;
 use Luchavez\StarterKit\Abstracts\BaseStarterKitServiceProvider;
 use Luchavez\StarterKit\Interfaces\ProviderConsoleKernelInterface;
@@ -34,6 +38,8 @@ class AwsSesBounceServiceProvider extends BaseStarterKitServiceProvider implemen
      */
     protected array $observer_map = [
         BounceNotificationObserver::class => BounceNotification::class,
+        ComplaintNotificationObserver::class => ComplaintNotification::class,
+        EmailAddressObserver::class => EmailAddress::class,
     ];
 
     /**
@@ -103,15 +109,6 @@ class AwsSesBounceServiceProvider extends BaseStarterKitServiceProvider implemen
 
         // Registering package commands.
         $this->commands($this->commands);
-    }
-
-    /**
-     * @param  bool  $is_api
-     * @return array
-     */
-    public function getDefaultRouteMiddleware(bool $is_api): array
-    {
-        return [];
     }
 
     /**
